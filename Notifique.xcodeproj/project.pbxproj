@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D7599921A7A9BBD00ECAA1B /* RBNotifique.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7599911A7A9BBD00ECAA1B /* RBNotifique.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D7599981A7A9BBD00ECAA1B /* RBNotifique.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75998C1A7A9BBD00ECAA1B /* RBNotifique.framework */; };
+		2D7599921A7A9BBD00ECAA1B /* Notifique.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7599911A7A9BBD00ECAA1B /* Notifique.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D7599981A7A9BBD00ECAA1B /* Notifique.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D75998C1A7A9BBD00ECAA1B /* Notifique.framework */; };
 		2D75999F1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D75999E1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift */; };
-		2D7599A91A7A9BF100ECAA1B /* RBNotifique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7599A81A7A9BF100ECAA1B /* RBNotifique.swift */; };
-		2D7599AA1A7A9FBD00ECAA1B /* RBNotifique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7599A81A7A9BF100ECAA1B /* RBNotifique.swift */; };
+		2D7599A91A7A9BF100ECAA1B /* Notifique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7599A81A7A9BF100ECAA1B /* Notifique.swift */; };
+		2D7599AA1A7A9FBD00ECAA1B /* Notifique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7599A81A7A9BF100ECAA1B /* Notifique.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +25,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D75998C1A7A9BBD00ECAA1B /* RBNotifique.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBNotifique.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D75998C1A7A9BBD00ECAA1B /* Notifique.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Notifique.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7599901A7A9BBD00ECAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D7599911A7A9BBD00ECAA1B /* RBNotifique.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBNotifique.h; sourceTree = "<group>"; };
-		2D7599971A7A9BBD00ECAA1B /* RBNotifiqueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBNotifiqueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7599911A7A9BBD00ECAA1B /* Notifique.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifique.h; sourceTree = "<group>"; };
+		2D7599971A7A9BBD00ECAA1B /* NotifiqueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotifiqueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D75999D1A7A9BBD00ECAA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D75999E1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBNotifiqueTests.swift; sourceTree = "<group>"; };
-		2D7599A81A7A9BF100ECAA1B /* RBNotifique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBNotifique.swift; sourceTree = "<group>"; };
+		2D7599A81A7A9BF100ECAA1B /* Notifique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifique.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7599981A7A9BBD00ECAA1B /* RBNotifique.framework in Frameworks */,
+				2D7599981A7A9BBD00ECAA1B /* Notifique.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +56,8 @@
 		2D7599821A7A9BBD00ECAA1B = {
 			isa = PBXGroup;
 			children = (
-				2D75998E1A7A9BBD00ECAA1B /* RBNotifique */,
-				2D75999B1A7A9BBD00ECAA1B /* RBNotifiqueTests */,
+				2D75998E1A7A9BBD00ECAA1B /* Notifique */,
+				2D75999B1A7A9BBD00ECAA1B /* NotifiqueTests */,
 				2D75998D1A7A9BBD00ECAA1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,19 +65,20 @@
 		2D75998D1A7A9BBD00ECAA1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D75998C1A7A9BBD00ECAA1B /* RBNotifique.framework */,
-				2D7599971A7A9BBD00ECAA1B /* RBNotifiqueTests.xctest */,
+				2D75998C1A7A9BBD00ECAA1B /* Notifique.framework */,
+				2D7599971A7A9BBD00ECAA1B /* NotifiqueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D75998E1A7A9BBD00ECAA1B /* RBNotifique */ = {
+		2D75998E1A7A9BBD00ECAA1B /* Notifique */ = {
 			isa = PBXGroup;
 			children = (
-				2D7599911A7A9BBD00ECAA1B /* RBNotifique.h */,
+				2D7599911A7A9BBD00ECAA1B /* Notifique.h */,
 				2D75998F1A7A9BBD00ECAA1B /* Supporting Files */,
-				2D7599A81A7A9BF100ECAA1B /* RBNotifique.swift */,
+				2D7599A81A7A9BF100ECAA1B /* Notifique.swift */,
 			);
+			name = Notifique;
 			path = RBNotifique;
 			sourceTree = "<group>";
 		};
@@ -89,12 +90,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2D75999B1A7A9BBD00ECAA1B /* RBNotifiqueTests */ = {
+		2D75999B1A7A9BBD00ECAA1B /* NotifiqueTests */ = {
 			isa = PBXGroup;
 			children = (
 				2D75999E1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift */,
 				2D75999C1A7A9BBD00ECAA1B /* Supporting Files */,
 			);
+			name = NotifiqueTests;
 			path = RBNotifiqueTests;
 			sourceTree = "<group>";
 		};
@@ -113,16 +115,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7599921A7A9BBD00ECAA1B /* RBNotifique.h in Headers */,
+				2D7599921A7A9BBD00ECAA1B /* Notifique.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2D75998B1A7A9BBD00ECAA1B /* RBNotifique */ = {
+		2D75998B1A7A9BBD00ECAA1B /* Notifique */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D7599A21A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "RBNotifique" */;
+			buildConfigurationList = 2D7599A21A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "Notifique" */;
 			buildPhases = (
 				2D7599871A7A9BBD00ECAA1B /* Sources */,
 				2D7599881A7A9BBD00ECAA1B /* Frameworks */,
@@ -133,14 +135,14 @@
 			);
 			dependencies = (
 			);
-			name = RBNotifique;
+			name = Notifique;
 			productName = RBNotifique;
-			productReference = 2D75998C1A7A9BBD00ECAA1B /* RBNotifique.framework */;
+			productReference = 2D75998C1A7A9BBD00ECAA1B /* Notifique.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2D7599961A7A9BBD00ECAA1B /* RBNotifiqueTests */ = {
+		2D7599961A7A9BBD00ECAA1B /* NotifiqueTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D7599A51A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "RBNotifiqueTests" */;
+			buildConfigurationList = 2D7599A51A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "NotifiqueTests" */;
 			buildPhases = (
 				2D7599931A7A9BBD00ECAA1B /* Sources */,
 				2D7599941A7A9BBD00ECAA1B /* Frameworks */,
@@ -151,9 +153,9 @@
 			dependencies = (
 				2D75999A1A7A9BBD00ECAA1B /* PBXTargetDependency */,
 			);
-			name = RBNotifiqueTests;
+			name = NotifiqueTests;
 			productName = RBNotifiqueTests;
-			productReference = 2D7599971A7A9BBD00ECAA1B /* RBNotifiqueTests.xctest */;
+			productReference = 2D7599971A7A9BBD00ECAA1B /* NotifiqueTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D7599861A7A9BBD00ECAA1B /* Build configuration list for PBXProject "RBNotifique" */;
+			buildConfigurationList = 2D7599861A7A9BBD00ECAA1B /* Build configuration list for PBXProject "Notifique" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D75998B1A7A9BBD00ECAA1B /* RBNotifique */,
-				2D7599961A7A9BBD00ECAA1B /* RBNotifiqueTests */,
+				2D75998B1A7A9BBD00ECAA1B /* Notifique */,
+				2D7599961A7A9BBD00ECAA1B /* NotifiqueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7599A91A7A9BF100ECAA1B /* RBNotifique.swift in Sources */,
+				2D7599A91A7A9BF100ECAA1B /* Notifique.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7599AA1A7A9FBD00ECAA1B /* RBNotifique.swift in Sources */,
+				2D7599AA1A7A9FBD00ECAA1B /* Notifique.swift in Sources */,
 				2D75999F1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,7 +233,7 @@
 /* Begin PBXTargetDependency section */
 		2D75999A1A7A9BBD00ECAA1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D75998B1A7A9BBD00ECAA1B /* RBNotifique */;
+			target = 2D75998B1A7A9BBD00ECAA1B /* Notifique */;
 			targetProxy = 2D7599991A7A9BBD00ECAA1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -333,7 +335,7 @@
 				INFOPLIST_FILE = RBNotifique/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notifique;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -350,7 +352,7 @@
 				INFOPLIST_FILE = RBNotifique/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notifique;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -368,7 +370,7 @@
 				);
 				INFOPLIST_FILE = RBNotifiqueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NotifiqueTests;
 			};
 			name = Debug;
 		};
@@ -381,14 +383,14 @@
 				);
 				INFOPLIST_FILE = RBNotifiqueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NotifiqueTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D7599861A7A9BBD00ECAA1B /* Build configuration list for PBXProject "RBNotifique" */ = {
+		2D7599861A7A9BBD00ECAA1B /* Build configuration list for PBXProject "Notifique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D7599A01A7A9BBD00ECAA1B /* Debug */,
@@ -397,21 +399,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D7599A21A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "RBNotifique" */ = {
+		2D7599A21A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "Notifique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D7599A31A7A9BBD00ECAA1B /* Debug */,
 				2D7599A41A7A9BBD00ECAA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		2D7599A51A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "RBNotifiqueTests" */ = {
+		2D7599A51A7A9BBD00ECAA1B /* Build configuration list for PBXNativeTarget "NotifiqueTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D7599A61A7A9BBD00ECAA1B /* Debug */,
 				2D7599A71A7A9BBD00ECAA1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

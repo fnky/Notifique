@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for RBNotifique.
-FOUNDATION_EXPORT double RBNotifiqueVersionNumber;
+FOUNDATION_EXPORT double NotifiqueVersionNumber;
 
 //! Project version string for RBNotifique.
-FOUNDATION_EXPORT const unsigned char RBNotifiqueVersionString[];
+FOUNDATION_EXPORT const unsigned char NotifiqueVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RBNotifique/PublicHeader.h>
 

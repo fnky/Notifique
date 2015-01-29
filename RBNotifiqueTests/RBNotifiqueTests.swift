@@ -1,6 +1,6 @@
 //
-//  RBNotifiqueTests.swift
-//  RBNotifiqueTests
+//  NotifiqueTests.swift
+//  NotifiqueTests
 //
 //  Created by ChristianEnevoldsen on 29/01/15.
 //  Copyright (c) 2015 Reversebox. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class RBNotifiqueTests: XCTestCase {
+class NotifiqueTests: XCTestCase {
 
   var count:Int = 0
   var update: Int = 1
@@ -20,9 +20,9 @@ class RBNotifiqueTests: XCTestCase {
   
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
-    RBNotifique.on("target3").then(target: self, selector: "update:").then(target: self, selector: "update2:").then(target: self, selector: "update3:")
-    RBNotifique.on("target").then(target: self, selector: "update:")
-    RBNotifique.on("target2").then(target: self, selector: "update2:").then { (notificaition, object) -> Void in
+    Notifique.on("target3").then(target: self, selector: "update:").then(target: self, selector: "update2:").then(target: self, selector: "update3:")
+    Notifique.on("target").then(target: self, selector: "update:")
+    Notifique.on("target2").then(target: self, selector: "update2:").then { (notificaition, object) -> Void in
       self.update = 2
     }
     super.tearDown()
@@ -41,7 +41,7 @@ class RBNotifiqueTests: XCTestCase {
   }
 
   func testThen() {
-    RBNotifique.on("test").then { (notificaition, object) -> Void in
+    Notifique.on("test").then { (notificaition, object) -> Void in
       self.count = 1
     }.then { (notificaition, object) -> Void in
       self.count = 2
@@ -52,7 +52,7 @@ class RBNotifiqueTests: XCTestCase {
 
   func testWith() {
     var s = "with"
-    RBNotifique.on("test").with(object: s).then { (notificaition, object) -> Void in
+    Notifique.on("test").with(object: s).then { (notificaition, object) -> Void in
       XCTAssertEqual(s, (object as String), "")
     }
     NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)

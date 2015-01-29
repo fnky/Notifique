@@ -8,13 +8,11 @@
 
 import UIKit
 
-private var notifications: [RBNotifique] = []
-private let helper = RBNotifiqueHelper()
+private var notifications: [Notifique] = []
+private let helper = NotifiqueHelper()
 private let nc = NSNotificationCenter.defaultCenter()
 
-private class RBNotifiqueHelper: NSObject {
-
-
+private class NotifiqueHelper: NSObject {
 
   override init() {
     super.init()
@@ -38,31 +36,31 @@ private class RBNotifiqueHelper: NSObject {
 
 }
 
-public class RBNotifique: NSObject {
+public class Notifique: NSObject {
 
-  public typealias RBNotiqueHandle = ( notificaition: NSNotification,
+  public typealias NotifiqueHandler = ( notificaition: NSNotification,
                                               object: AnyObject? ) -> Void
 
   private var notificationName: String
   private var object: AnyObject?
-  lazy private var closures: [RBNotiqueHandle] = []
+  lazy private var closures: [NotifiqueHandler] = []
 
   init(notificationName _name: String) {
     notificationName = _name
   }
 
-  public class func on(notificationName: String) -> RBNotifique {
-    return RBNotifique(notificationName: notificationName)
+  public class func on(notificationName: String) -> Notifique {
+    return Notifique(notificationName: notificationName)
   }
 
-  public func with(object _object: AnyObject) -> RBNotifique {
+  public func with(object _object: AnyObject) -> Notifique {
     assert(object == nil, "\(__FUNCTION__) is not chainable. Make sure to call \(__FUNCTION__) only once")
     assert(find(notifications, self) == nil, "\(__FUNCTION__) cannot be chained after selector \"then:\"")
     object = _object
     return self
   }
 
-  public func then(closure: RBNotiqueHandle) -> RBNotifique {
+  public func then(closure: NotifiqueHandler) -> Notifique {
     self.closures.append(closure)
     if find(notifications, self) == nil {
       NSNotificationCenter.defaultCenter().addObserver(self, selector: "handle:", name: notificationName, object: object)
@@ -72,7 +70,7 @@ public class RBNotifique: NSObject {
     return self
   }
 
-  public func then(target _target: AnyObject, selector: Selector) -> RBNotifique {
+  public func then(target _target: AnyObject, selector: Selector) -> Notifique {
     NSNotificationCenter.defaultCenter().addObserver(_target, selector: selector, name: notificationName, object: object)
 
     if find(notifications, self) == nil {

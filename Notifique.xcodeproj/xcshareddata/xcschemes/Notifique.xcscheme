@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D75998B1A7A9BBD00ECAA1B"
-               BuildableName = "RBNotifique.framework"
-               BlueprintName = "RBNotifique"
-               ReferencedContainer = "container:RBNotifique.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D7599961A7A9BBD00ECAA1B"
-               BuildableName = "RBNotifiqueTests.xctest"
-               BlueprintName = "RBNotifiqueTests"
-               ReferencedContainer = "container:RBNotifique.xcodeproj">
+               BuildableName = "Notifique.framework"
+               BlueprintName = "Notifique"
+               ReferencedContainer = "container:Notifique.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,26 +28,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D7599961A7A9BBD00ECAA1B"
-               BuildableName = "RBNotifiqueTests.xctest"
-               BlueprintName = "RBNotifiqueTests"
-               ReferencedContainer = "container:RBNotifique.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D75998B1A7A9BBD00ECAA1B"
-            BuildableName = "RBNotifique.framework"
-            BlueprintName = "RBNotifique"
-            ReferencedContainer = "container:RBNotifique.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -76,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D75998B1A7A9BBD00ECAA1B"
-            BuildableName = "RBNotifique.framework"
-            BlueprintName = "RBNotifique"
-            ReferencedContainer = "container:RBNotifique.xcodeproj">
+            BuildableName = "Notifique.framework"
+            BlueprintName = "Notifique"
+            ReferencedContainer = "container:Notifique.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D75998B1A7A9BBD00ECAA1B"
-            BuildableName = "RBNotifique.framework"
-            BlueprintName = "RBNotifique"
-            ReferencedContainer = "container:RBNotifique.xcodeproj">
+            BuildableName = "Notifique.framework"
+            BlueprintName = "Notifique"
+            ReferencedContainer = "container:Notifique.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
