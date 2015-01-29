@@ -78,8 +78,7 @@
 				2D75998F1A7A9BBD00ECAA1B /* Supporting Files */,
 				2D7599A81A7A9BF100ECAA1B /* Notifique.swift */,
 			);
-			name = Notifique;
-			path = RBNotifique;
+			path = Notifique;
 			sourceTree = "<group>";
 		};
 		2D75998F1A7A9BBD00ECAA1B /* Supporting Files */ = {
@@ -96,8 +95,7 @@
 				2D75999E1A7A9BBD00ECAA1B /* RBNotifiqueTests.swift */,
 				2D75999C1A7A9BBD00ECAA1B /* Supporting Files */,
 			);
-			name = NotifiqueTests;
-			path = RBNotifiqueTests;
+			path = NotifiqueTests;
 			sourceTree = "<group>";
 		};
 		2D75999C1A7A9BBD00ECAA1B /* Supporting Files */ = {
