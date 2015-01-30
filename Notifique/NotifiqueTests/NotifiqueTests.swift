@@ -21,11 +21,6 @@ class NotifiqueTests: XCTestCase {
   
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
-    Notifique.on("target3").then(target: self, selector: "update:").then(target: self, selector: "update2:").then(target: self, selector: "update3:")
-    Notifique.on("target").then(target: self, selector: "update:")
-    Notifique.on("target2").then(target: self, selector: "update2:").then { (notificaition, object) -> Void in
-      self.update = 2
-    }
     super.tearDown()
   }
   
@@ -42,42 +37,40 @@ class NotifiqueTests: XCTestCase {
   }
   
   func testThen() {
-    Notifique.on("test").then { (notificaition, object) -> Void in
-      self.count = 1
-      }.then { (notificaition, object) -> Void in
-        self.count = 2
-    }
+    Notifique.on("test")
+      .then { (notification, object) in self.count = 1 }
+      .then { (notification, object) in self.count = 2 }
     NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)
     XCTAssert(count == 2, "Failed")
   }
   
   func testWith() {
-    var s = "with"
-    Notifique.on("test").with(object: s).then { (notificaition, object) -> Void in
-      XCTAssertEqual(s, (object as String), "")
-    }
+    var withObject = "with"
+    Notifique.on("test").with(object: withObject)?
+      .then { (notification, object) in
+        XCTAssertEqual(withObject, object as String, "should be equal object from arguments")
+      }
     NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)
   }
-  
   
   func testThenTarget() {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
       NSNotificationCenter.defaultCenter().postNotificationName("target", object: self)
-      XCTAssert(self.update == 1337, "expected 1337 but got \(self.update)")
+      XCTAssert(self.update == 1337, "should be 1337")
     })
   }
   
   func testThenThen() {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
       NSNotificationCenter.defaultCenter().postNotificationName("target2", object: self)
-      XCTAssert(self.update == self.update2, "expected \(self.update) = \(self.update2)")
+      XCTAssert(self.update == self.update2, "should be 0")
     })
   }
   
   func testThenThenTarget() {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
       NSNotificationCenter.defaultCenter().postNotificationName("target3", object: self)
-      XCTAssert(self.update == 89, "expected \(self.update) = 89")
+      XCTAssert(self.update == 89, "should be 89")
     })
   }
   
