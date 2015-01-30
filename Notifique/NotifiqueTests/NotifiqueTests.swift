@@ -15,8 +15,22 @@ class NotifiqueTests: XCTestCase {
   var count:Int = 0
   var update: Int = 1
   var update2: Int = 0
+  var withObj: String = "hejsa"
+  
   override func setUp() {
     super.setUp()
+    Notifique.on("kage").with(object: withObj)?.then({ (notification, object) -> Void in
+      println("Dinmor")
+      self.withObj = "changedAlot"
+    })
+    
+    Notifique.on("kage").then(target: self, selector: "kage:")
+    //NSNotificationCenter.defaultCenter().addObserver(self, selector: "kage:", name: "kage", object: nil)
+    NSNotificationCenter.defaultCenter().postNotificationName("kage", object: nil)
+  }
+  
+  func kage(e: NSNotification) {
+    println("Kage")
   }
   
   override func tearDown() {
@@ -44,13 +58,29 @@ class NotifiqueTests: XCTestCase {
     XCTAssert(count == 2, "Failed")
   }
   
+  func testKage() {
+    XCTAssertTrue(withObj == "changedAlot", "expected \"changedAlot\" but got \(withObj)")
+  }
+  
+  func then(n:AnyObject) {
+    println("thenthen")
+  }
+  
   func testWith() {
     var withObject = "with"
     Notifique.on("test").with(object: withObject)?
       .then { (notification, object) in
-        XCTAssertEqual(withObject, object as String, "should be equal object from arguments")
+        XCTAssertEqual("kage", object as String, "should be equal object from arguments")
+        XCTAssertFalse(true, "SHOULD BE FALSE")
       }
     NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)
+  }
+  
+  func testThenWith() {
+    var withObject = "withThen"
+    Notifique.on("thenWith").then { (notification, object) in
+      XCTAssertEqual("32", object as String, "should be equal object from arguments")
+    }.with(object: "firstValue")?.with(object: withObject)
   }
   
   func testThenTarget() {

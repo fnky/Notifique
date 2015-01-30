@@ -26,11 +26,11 @@ private class NotifiqueHelper: NSObject {
   func exit(notification: NSNotification) {
     
     for notification in notifications {
-      nc.removeObserver(notification)
+      //nc.removeObserver(notification)
     }
     
-    notifications.removeAll(keepCapacity: false)
-    nc.removeObserver(self)
+    //notifications.removeAll(keepCapacity: false)
+    //nc.removeObserver(self)
   }
   
 }
@@ -53,16 +53,17 @@ public class Notifique: NSObject {
   }
   
   public func with(object _object: AnyObject) -> Notifique? {
-    //assert(object == nil, "\(__FUNCTION__) is not chainable. Make sure to call \(__FUNCTION__) only once")
-    //assert(find(notifications, self) == nil, "\(__FUNCTION__) cannot be chained after selector \"then:\"")
     object = _object
     return self
   }
   
   public func then(closure: NotifiqueHandler) -> Notifique {
     self.closures.append(closure)
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "handle:",
+      name: notificationName, object: object)
+    
     if find(notifications, self) == nil {
-      NSNotificationCenter.defaultCenter().addObserver(self, selector: "handle:", name: notificationName, object: object)
       notifications.append(self)
     }
     
