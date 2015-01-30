@@ -38,7 +38,7 @@ private class NotifiqueHelper: NSObject {
 
 public class Notifique: NSObject {
 
-  public typealias NotifiqueHandler = ( notificaition: NSNotification,
+  public typealias NotifiqueHandler = ( notification: NSNotification,
                                               object: AnyObject? ) -> Void
 
   private var notificationName: String
@@ -85,7 +85,7 @@ public class Notifique: NSObject {
 
   func handle(notification: NSNotification) {
     for closure in closures {
-      closure(notificaition: notification, object: object)
+      closure(notification: notification, object: object)
     }
   }
   
